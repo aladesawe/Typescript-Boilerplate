@@ -1,6 +1,6 @@
-import { NextFunction, Request, Response } from "express";
+import { NextFunction, Request, Response } from 'express';
 
-import { APIError, HTTPStatus } from "../types";
+import { APIError, HTTPStatus } from '../types';
 
 export function errorHandler(err: APIError, req: Request, res: Response, next: NextFunction): void {
   const status = err.status || HTTPStatus.InternalServerError;
